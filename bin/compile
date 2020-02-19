@@ -13,7 +13,7 @@ mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
 mkdir -p gdrive
 cd gdrive
-curl -L --silent "https://github.com/gdrive-org/gdrive/releases/download/2.1.0/gdrive-linux-x64"
+curl -L -o gdrive --silent "https://github.com/gdrive-org/gdrive/releases/download/2.1.0/gdrive-linux-x64" 
 
 PROFILE_PATH="$BUILD_DIR/.profile.d/gdrive.sh"
 mkdir -p $(dirname $PROFILE_PATH)
