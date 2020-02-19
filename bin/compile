@@ -14,7 +14,7 @@ cd $VENDOR_DIR
 mkdir -p gdrive
 cd gdrive
 curl -L -o gdrive --silent "https://github.com/gdrive-org/gdrive/releases/download/2.1.0/gdrive-linux-x64" 
-chmod 600 gdrive
+chmod 700 gdrive
 
 PROFILE_PATH="$BUILD_DIR/.profile.d/gdrive.sh"
 mkdir -p $(dirname $PROFILE_PATH)
