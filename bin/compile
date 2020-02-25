@@ -11,11 +11,13 @@ VENDOR_DIR="vendor"
 cd $BUILD_DIR
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
-mkdir -p gdrive
-cd gdrive
-curl -L -o gdrive --silent "https://github.com/gdrive-org/gdrive/releases/download/2.1.0/gdrive-linux-x64" 
+mkdir -p bin
+cd bin
+curl -L -o gdrive "https://github.com/gdrive-org/gdrive/releases/download/2.1.0/gdrive-linux-x64" 
 chmod 700 gdrive
+curl -L -o jq "https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64" 
+chmod 700 jq
 
-PROFILE_PATH="$BUILD_DIR/.profile.d/gdrive.sh"
+PROFILE_PATH="$BUILD_DIR/.profile.d/exiaapp.sh"
 mkdir -p $(dirname $PROFILE_PATH)
-echo 'export PATH="$PATH:${HOME}/vendor/gdrive"' >> $PROFILE_PATH
+echo 'export PATH="$PATH:${HOME}/vendor/bin"' >> $PROFILE_PATH
